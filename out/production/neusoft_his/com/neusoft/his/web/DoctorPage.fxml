@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="763.0" prefWidth="1028.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neusoft.his.Controller.DoctorPageController">
+    <children>
+        <SplitPane dividerPositions="0.2699805068226121" layoutX="298.0" layoutY="304.0" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="706.0" prefWidth="198.0">
+                    <children>
+                        <Label layoutX="18.0" layoutY="24.0" text="就诊患者">
+                            <font>
+                                <Font name="MingLiU-ExtB" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="68.0" layoutY="165.0" text="患者详细信息">
+                            <font>
+                                <Font name="MingLiU-ExtB" size="18.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="button_next" layoutX="154.0" layoutY="23.0" mnemonicParsing="false" onAction="#setButton_next" prefHeight="23.0" prefWidth="72.0" style="-fx-background-color: #60bdcd; -fx-border-radius: 25;" text="下一位" textFill="#fdfdfd">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                        <Label layoutX="16.0" layoutY="209.0" text="姓名：">
+                            <font>
+                                <Font name="MingLiU-ExtB" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="251.0" text="性别：">
+                            <font>
+                                <Font name="MingLiU-ExtB" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="294.0" text="年龄：">
+                            <font>
+                                <Font name="MingLiU-ExtB" size="18.0" />
+                            </font>
+                        </Label>
+                        <Text fx:id="Text_name" layoutX="100.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                            <font>
+                                <Font name="MingLiU-ExtB" size="18.0" />
+                            </font>
+                        </Text>
+                        <Text fx:id="Text_sex" layoutX="101.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                            <font>
+                                <Font name="MingLiU-ExtB" size="18.0" />
+                            </font>
+                        </Text>
+                        <Text fx:id="Text_age" layoutX="100.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                            <font>
+                                <Font name="MingLiU-ExtB" size="18.0" />
+                            </font>
+                        </Text>
+                  <Label layoutX="11.0" layoutY="331.0" prefHeight="22.0" prefWidth="72.0" text="病历号：">
+                     <font>
+                        <Font name="MingLiU-ExtB" size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="text_id" layoutX="101.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                     <font>
+                        <Font name="MingLiU-ExtB" size="18.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="16.0" layoutY="80.0" prefHeight="18.0" prefWidth="62.0" text="当前患者">
+                     <font>
+                        <Font name="Consolas" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="9.0" layoutY="127.0" prefHeight="15.0" prefWidth="72.0" text="下一位患者">
+                     <font>
+                        <Font name="Consolas" size="13.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="text_currentP" layoutX="96.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" wrappingWidth="80.0">
+                     <font>
+                        <Font name="Consolas" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="text_nextP" layoutX="104.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" wrappingWidth="80.0">
+                     <font>
+                        <Font name="Consolas" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="button_refresh" layoutX="176.0" layoutY="395.0" mnemonicParsing="false" onAction="#setButton_refresh" prefHeight="24.0" prefWidth="54.0" style="-fx-background-color: #60bdcd; -fx-border-radius: 25;" text="刷新" textFill="#fdfdfd">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="button_alreadyDiagnosed" layoutX="18.0" layoutY="395.0" mnemonicParsing="false" onAction="#setButton_alreadyDiagnosed" prefHeight="24.0" prefWidth="54.0" style="-fx-background-color: #60bdcd; -fx-border-radius: 25;" text="已诊" textFill="#fdfdfd">
+                     <font>
+                        <Font name="MingLiU-ExtB" size="12.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="tableView_waitTreat" layoutX="12.0" layoutY="433.0" onMouseClicked="#showPMRecord" prefHeight="298.0" prefWidth="250.0">
+                    <columns>
+                      <TableColumn fx:id="pID" prefWidth="75.0" text="病历号" />
+                      <TableColumn fx:id="pName" prefWidth="174.4" text="姓名" />
+                    </columns>
+                  </TableView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <SplitPane layoutX="295.0" layoutY="283.0" orientation="VERTICAL" prefHeight="766.0" prefWidth="792.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                        <Label layoutX="14.0" layoutY="14.0" text="病史内容">
+                                            <font>
+                                                <Font name="MingLiU-ExtB" size="24.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="52.0" layoutY="77.0" prefHeight="24.0" prefWidth="47.0" text="主诉">
+                                            <font>
+                                                <Font name="MingLiU-ExtB" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="43.0" layoutY="134.0" text="现病史">
+                                            <font>
+                                                <Font name="MingLiU-ExtB" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="17.0" layoutY="189.0" text="现病治疗情况">
+                                            <font>
+                                                <Font name="MingLiU-ExtB" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="43.0" layoutY="251.0" text="既往史">
+                                            <font>
+                                                <Font name="MingLiU-ExtB" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="34.0" layoutY="318.0" text="体格检查">
+                                            <font>
+                                                <Font name="MingLiU-ExtB" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="14.0" layoutY="421.0" text="评估诊断">
+                                            <font>
+                                                <Font name="MingLiU-ExtB" size="24.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="TextField_chiefComplaint" layoutX="137.0" layoutY="70.0" prefHeight="38.0" prefWidth="592.0" />
+                                        <TextField fx:id="TextField_medicalHistory" layoutX="137.0" layoutY="127.0" prefHeight="38.0" prefWidth="592.0" />
+                                        <TextField fx:id="TextField_treatmentSituation" layoutX="137.0" layoutY="180.0" prefHeight="38.0" prefWidth="592.0" />
+                                        <TextField fx:id="TextField_pastHistory" layoutX="137.0" layoutY="244.0" prefHeight="38.0" prefWidth="391.0" />
+                                        <TextField fx:id="TextField_medicalReport" layoutX="137.0" layoutY="309.0" prefHeight="38.0" prefWidth="391.0" />
+                                        <Button fx:id="Button_prescription" layoutX="535.0" layoutY="680.0" mnemonicParsing="false" onAction="#goToPrescribe" prefHeight="38.0" prefWidth="195.0" style="  -fx-background-color:#60bdcd;" text="前往开药" textFill="#fdfdfd">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                                        <TextArea fx:id="TextArea_diagnosis" layoutX="32.0" layoutY="464.0" prefHeight="194.0" prefWidth="702.0" AnchorPane.rightAnchor="16.0" />
+                                        <Button fx:id="Button_save" layoutX="262.0" layoutY="680.0" mnemonicParsing="false" onAction="#save" prefHeight="38.0" prefWidth="195.0" style="-fx-background-color: #60bdcd;" text="保存以上信息" textFill="#fdfdfd">
+                                 <font>
+                                    <Font name="MingLiU-ExtB" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Label layoutX="52.0" layoutY="382.0" prefHeight="22.0" prefWidth="47.0" text="病种">
+                                 <font>
+                                    <Font name="Consolas" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textField_dis" layoutX="137.0" layoutY="374.0" prefHeight="38.0" prefWidth="391.0" />
+                              <Text fx:id="text_save" fill="#fd0202" layoutX="112.0" layoutY="676.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="72.0">
+                                 <font>
+                                    <Font name="Consolas" size="16.0" />
+                                 </font>
+                              </Text>
+                              <TreeView fx:id="treeView_dis" layoutX="535.0" layoutY="224.0" onMouseClicked="#dis" prefHeight="231.0" prefWidth="195.0" AnchorPane.leftAnchor="535.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </TreeView>
+                              <Button fx:id="button_search" layoutX="633.0" layoutY="15.0" mnemonicParsing="false" onAction="#setButton_search" prefHeight="24.0" prefWidth="72.0" style="-fx-background-color: #60bdcd; -fx-border-radius: 25;" text="查询" textFill="#fdfdfd" />
+                              <Button fx:id="button_returnVisit" layoutX="27.0" layoutY="680.0" mnemonicParsing="false" onAction="#setButton_returnVisit" prefHeight="38.0" prefWidth="195.0" style="-fx-background-color: #60bdcd; -fx-border-radius: 25;" text="检查后复诊" textFill="#fdfdfd">
+                                 <font>
+                                    <Font name="MingLiU-ExtB" size="12.0" />
+                                 </font></Button>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

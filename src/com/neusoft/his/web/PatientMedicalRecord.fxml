@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="280.0" prefWidth="428.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neusoft.his.Controller.PatientMedicalRecordController">
+   <children>
+      <ListView fx:id="medicalRecord" layoutX="200.0" layoutY="27.0" prefHeight="253.0" prefWidth="432.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0" />
+      <Label layoutY="2.0" prefHeight="27.0" prefWidth="110.0" style="-fx-background-color: #60bdcd;" text="  病历号" textAlignment="CENTER" textFill="#f8ffff" AnchorPane.topAnchor="0.0" />
+      <Label layoutX="104.0" layoutY="2.0" prefHeight="27.0" prefWidth="147.0" style="-fx-background-color: #60bdcd;" text="    姓名" textAlignment="CENTER" textFill="#f8ffff" AnchorPane.topAnchor="0.0" />
+      <Label layoutX="269.0" layoutY="2.0" prefHeight="27.0" prefWidth="207.0" style="-fx-background-color: #60bdcd;" text="            就诊时间" textFill="#f8ffff" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

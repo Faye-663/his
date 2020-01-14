@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neusoft.his.Controller.RefundController">
+    <children>
+        <Button fx:id="Button_toLogin" layoutX="797.0" layoutY="589.0" mnemonicParsing="false" onAction="#setButton_toLogin" prefHeight="41.0" prefWidth="110.0" style="  -fx-background-color:#60bdcd;" text="返回登录界面" textFill="#fdfdfd">
+            <font>
+                <Font name="MingLiU-ExtB" size="14.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </Button>
+        <Text fx:id="Text_tip" fill="#05d5e8" layoutX="185.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="205.84027099609375">
+            <font>
+                <Font name="MingLiU-ExtB" size="24.0" />
+            </font>
+        </Text>
+        <Label layoutX="230.0" layoutY="199.0" prefHeight="24.0" prefWidth="148.0" text="请输入您的发票号">
+            <font>
+                <Font name="MingLiU-ExtB" size="18.0" />
+            </font>
+        </Label>
+        <TextField layoutX="424.0" layoutY="196.0" prefHeight="30.0" prefWidth="222.0" />
+        <Button fx:id="Button_refund" layoutX="658.0" layoutY="366.0" mnemonicParsing="false" onAction="#setButton_refund" prefHeight="56.0" prefWidth="118.0" style="  -fx-background-color:#60bdcd;" text="退费" textFill="#fdfdfd">
+            <font>
+                <Font name="MingLiU-ExtB" size="24.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </Button>
+      <ImageView fitHeight="332.0" fitWidth="452.0" layoutX="27.0" layoutY="388.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/abc.jpg" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

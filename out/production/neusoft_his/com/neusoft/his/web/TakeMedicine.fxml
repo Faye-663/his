@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neusoft.his.Controller.TakeMedicine">
+    <children>
+        <Button fx:id="Button_toLogin" layoutX="179.0" layoutY="631.0" mnemonicParsing="false" onAction="#setButton_toLogin" prefHeight="47.0" prefWidth="111.0" style="  -fx-background-color:#60bdcd;" text="返回登录界面" textFill="#fdfdfd">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="MingLiU-ExtB" size="12.0" />
+         </font></Button>
+        <Label layoutX="247.0" layoutY="322.0" prefHeight="47.0" prefWidth="153.0" text="请输入您的病历号">
+            <font>
+                <Font name="MingLiU-ExtB" size="18.0" />
+            </font>
+        </Label>
+        <TextField layoutX="422.0" layoutY="332.0" prefHeight="28.0" prefWidth="228.0" />
+        <Button fx:id="Button_takeMedicine" layoutX="618.0" layoutY="547.0" mnemonicParsing="false" onAction="#setButton_takeMedicine" prefHeight="63.0" prefWidth="160.0" style="  -fx-background-color:#60bdcd;" text="取药" textFill="#fdfdfd">
+            <font>
+                <Font name="MingLiU-ExtB" size="24.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </Button>
+        <Text fx:id="Text_asd" fill="#0ed1f0" layoutX="536.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="262.6402587890625">
+            <font>
+                <Font name="MingLiU-ExtB" size="22.0" />
+            </font>
+        </Text>
+      <ImageView fitHeight="355.0" fitWidth="420.0" layoutX="37.0" layoutY="27.0" opacity="0.85" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="386.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="567.0" AnchorPane.topAnchor="27.0">
+         <image>
+            <Image url="@../../../../images/medicine.jpg" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

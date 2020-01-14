@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neusoft.his.Controller.RetreatPageController">
+    <children>
+        <Label layoutX="417.0" layoutY="281.0" prefHeight="30.0" prefWidth="170.0" text="请在此输入患者的发票号">
+            <font>
+                <Font name="MingLiU-ExtB" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="TextField_receiptNumber" layoutX="402.0" layoutY="324.0" prefHeight="30.0" prefWidth="188.0" />
+        <Button fx:id="Button_ok" layoutX="427.0" layoutY="384.0" mnemonicParsing="false" onAction="#determine" prefHeight="89.0" prefWidth="138.0" style="  -fx-background-color:#60bdcd;" text="确认退号" textFill="#fdfdfd">
+            <font>
+                <Font name="MingLiU-ExtB" size="24.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </Button>
+        <Button fx:id="Button_register" layoutX="14.0" layoutY="693.0" mnemonicParsing="false" onAction="#toRegister" prefHeight="30.0" prefWidth="234.0" style="  -fx-background-color:#60bdcd;" text="现场挂号" textFill="#fdfdfd">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+        <Button fx:id="Button_pay" layoutX="521.0" layoutY="693.0" mnemonicParsing="false" onAction="#pay" prefHeight="30.0" prefWidth="234.0" style="  -fx-background-color:#60bdcd;" text="缴费" textFill="#fdfdfd">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+        <Button fx:id="Button_retreat" layoutX="268.0" layoutY="693.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="234.0" style="  -fx-background-color:#60bdcd;" text="退号" textFill="#fdfdfd">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+        <Button fx:id="Button_toLogin" layoutX="776.0" layoutY="693.0" mnemonicParsing="false" onAction="#toLogin" prefHeight="30.0" prefWidth="234.0" style="  -fx-background-color:#60bdcd;" text="返回至登录界面" textFill="#fdfdfd">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+        <Text fx:id="Text_tips" fill="#0593f8" layoutX="342.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="132.240234375">
+            <font>
+                <Font name="MingLiU-ExtB" size="24.0" />
+            </font>
+        </Text>
+      <ImageView fitHeight="204.0" fitWidth="316.0" layoutX="94.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/asd.jpg" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
